@@ -1,0 +1,72 @@
+.ff-manrope {
+   font-family: 'Manrope', sans-serif;
+}
+.ff-pt {
+   font-family: 'PT Sans', sans-serif;
+}
+._flex {
+   display: flex;
+}
+._grid {
+   display: grid;
+}
+._orange {
+   color: $orange;
+}
+._main-title {
+   @include adaptiveValue('font-size', 48, 32);
+   font-weight: 900;
+   line-height: 1.16;
+}
+._title {
+   @include adaptiveValue('font-size', 36, 28);
+   font-weight: 700;
+   line-height: 1.16;
+}
+
+._underline {
+   position: relative;
+   &::after {
+      content: '';
+      position: absolute;
+      width: 110%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffa800;
+   }
+   &_small {
+      position: relative;
+      &::after {
+         content: '';
+         position: absolute;
+         width: 90%;
+         height: 2px;
+         bottom: 0;
+         left: 0;
+         background-color: #ffa800;
+      }
+   }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+   width: rem(44);
+   aspect-ratio: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #f7f7f7;
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+   border-radius: rem(5);
+}
+.swiper-pagination {
+   font-weight: 700;
+   font-size: rem(24);
+}
+.swiper-button-next {
+   img {
+      transform-origin: center;
+      transform: rotate(180deg);
+   }
+}

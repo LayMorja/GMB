@@ -1,0 +1,90 @@
+//====================================================================================================
+.footer {
+   background-color: $darkGrey;
+   &__container {
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         gap: rem(20);
+      }
+      min-height: rem(70);
+      padding-block: rem(10);
+      @media (min-width: $tablet) {
+         min-height: rem(93);
+         align-items: center;
+      }
+      color: #fff;
+      @media (max-width: $pc) {
+         justify-content: space-between;
+      }
+   }
+
+   &__logo {
+      margin-right: rem(15);
+      @media (min-width: $pc) {
+         margin-right: rem(40);
+      }
+   }
+
+   &__menu-footer {
+      @media (min-width: $pc) {
+         flex: 1 1 auto;
+      }
+   }
+
+   &__callback {
+      align-items: center;
+      gap: rem(20);
+      a {
+         &:first-child {
+            font-weight: 700;
+            white-space: nowrap;
+            @media (any-hover: hover) {
+               &:hover {
+                  text-decoration: underline;
+               }
+            }
+         }
+      }
+      .button {
+         padding-inline: rem(72);
+      }
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+      @media (max-width: $mobileSmall) {
+         .button {
+            width: 100%;
+         }
+      }
+   }
+}
+.menu-footer {
+   &__list {
+      @media (max-width: $tablet) {
+         flex-direction: column;
+      }
+      flex-wrap: wrap;
+      column-gap: rem(20);
+      row-gap: rem(10);
+      @media (min-width: $pc) {
+         column-gap: rem(40);
+      }
+   }
+
+   &__item {
+   }
+
+   &__link {
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+
+   &__icon {
+   }
+}
+
+//====================================================================================================
